@@ -18,7 +18,7 @@ const Header = ({data}) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    marginTop: hp('7'),
+    marginTop: hp('5'),
   },
   headerStyle: {
     marginTop: hp('2%'),

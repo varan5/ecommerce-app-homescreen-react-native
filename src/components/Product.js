@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, Image, FlatList} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -8,15 +8,12 @@ import {
 const Product = ({name, price, image}) => {
   return (
     <View style={styles.productStyle}>
-      <TouchableOpacity style={styles.imageTouchableOpacityStyle}>
-        <Image
-          style={styles.productImageStyle}
-          source={{
-            uri: 'https://lh3.googleusercontent.com/proxy/k4DTzrgQI0DZtcHQqogbOLv1KdglZv20Mw2JWazTOq2YpzySFn8xnk7ssHsUZA4PSGBOrScuELzDJRT_JTrxLcdiygNm3sslxkLsIntlEY_ndbHh_iBYgTg9L9nXTW7UnDnHjQjiAEe4_oMvyveGIg',
-          }}
-        />
-      </TouchableOpacity>
-
+      <Image
+        style={styles.productImageStyle}
+        source={{
+          uri: 'https://lh3.googleusercontent.com/proxy/k4DTzrgQI0DZtcHQqogbOLv1KdglZv20Mw2JWazTOq2YpzySFn8xnk7ssHsUZA4PSGBOrScuELzDJRT_JTrxLcdiygNm3sslxkLsIntlEY_ndbHh_iBYgTg9L9nXTW7UnDnHjQjiAEe4_oMvyveGIg',
+        }}
+      />
       <Text style={styles.productNameStyle}>{name}</Text>
       <Text style={styles.productPriceStyle}>{price}</Text>
     </View>
@@ -49,9 +46,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginLeft: hp('3%'),
     marginBottom: hp('.5%'),
-  },
-  imageTouchableOpacityStyle: {
-    backgroundColor: 'transparent',
   },
 });
 
